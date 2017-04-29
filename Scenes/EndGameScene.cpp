@@ -47,7 +47,7 @@ bool EndGameScene::init()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-	Vector<MenuItem*> MenuItems;//wektor przechowuj¹cy itemy menu, z ktorego utworzymy menu pozniej
+	Vector<MenuItem*> MenuItems;//wektor przechowujÂ¹cy itemy menu, z ktorego utworzymy menu pozniej
 								/////////////////////////////
 
 	//LABEL CONFIG DO NAPISOW
