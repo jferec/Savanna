@@ -42,7 +42,7 @@ public:
 	Layer* layer;
 	bool male;//////////////////////////////////
 	unsigned int age, posx, posy, IDdelete;/////ZMIENNE DO TWORZENIA ZWIERZAT
-	void AddRandomWater();////////////FUNKCJE DO OBS£UGI MAPY
+	void AddRandomWater();////////////FUNKCJE DO OBSÂ£UGI MAPY
 	void AddRandomTree();
 	void Reproduce();
 	void DeleteID(int id);
