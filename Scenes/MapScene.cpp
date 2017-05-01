@@ -61,14 +61,14 @@ bool MapScene::init()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-	Vector<MenuItem*> MenuItems;//wektor przechowuj¹cy itemy menu, z ktorego utworzymy menu pozniej
+	Vector<MenuItem*> MenuItems;//wektor przechowujÂ¹cy itemy menu, z ktorego utworzymy menu pozniej
 					
 	//labelConfig DO NAPISOW
 	TTFConfig labelConfig;
 	labelConfig.fontSize = 30;
 	labelConfig.outlineSize = 2;
 	labelConfig.fontFilePath = "fonts/Marker Felt.ttf";
-	//LABEL TYTU£OWY
+	//LABEL TYTUÂ£OWY
 	auto label = Label::createWithTTF(labelConfig, "MAPA");
 
 	// position the label on the center of the screen
@@ -131,7 +131,7 @@ bool MapScene::init()
 
 
 
-//TEXT FIELDY DO OBS£UGI DODAWANIE ZWIERZAT DO LISTY
+//TEXT FIELDY DO OBSÂ£UGI DODAWANIE ZWIERZAT DO LISTY
 
 	//TEXT FIELD DO WPROWADZENIA WIEKU
 	TextField *txtField3 = ui::TextField::create("wiek", "fonts/fabrik.ttf", 12);////////////WIEK AGE
@@ -154,7 +154,7 @@ bool MapScene::init()
 	txtField4->addEventListener(CC_CALLBACK_2(MapScene::textFieldEvent4, this));
 	txtField4->setColor(ccc3(127.0f, 255.0f, 0.0f));//c333 = kolory RGB od 0-255;
 
-	//TEXT FIELD DO WPROWADZENIA P£CI
+	//TEXT FIELD DO WPROWADZENIA PÂ£CI
 	TextField *txtField5 = ui::TextField::create("plec", "fonts/fabrik.ttf", 12);////////////
 	txtField5->setMaxLength(1);//////////////////////////////////////////////////////////////////////
 	txtField5->setMaxLengthEnabled(true);///////////////////////////////////////////////DOESN'T DO ANYTHING, NOT GETTING ANY DATA
@@ -194,7 +194,7 @@ bool MapScene::init()
 	txtField8->setColor(ccc3(127.0f, 255.0f, 0.0f));//c333 = kolory RGB od 0-255;
 	this->addChild(txtField8);
 
-//KONIEC STREFY TEXTFIELDÓW
+//KONIEC STREFY TEXTFIELDÃ“W
 
 
 //WYSWIETLA I AKTUALIZUJE LISTE ZWIERZAT ZNAJDUJACYCH SIE AKTUALNIE NA MAPIE
@@ -205,7 +205,7 @@ bool MapScene::init()
 	this->schedule(schedule_selector(MapScene::TimerMethod), 1);
 
 	
-//STREFA PRZYCISKÓW								  
+//STREFA PRZYCISKÃ“W								  
 //przycisk zatwierdzajacy dodanie zwierzecia
 	ui::Button *ourButton = Button::create("dodajzwierze.png");
 	ourButton->setPosition(Vec2(-visibleSize.width /50,
@@ -242,7 +242,7 @@ bool MapScene::init()
 		visibleSize.height / 5 *1.5));
 	ourButton5->addTouchEventListener(CC_CALLBACK_2(MapScene::touchEvent5, this));
 	this->addChild(ourButton5, 20);
-//KONIEC STREFY PRZYCISKÓW
+//KONIEC STREFY PRZYCISKÃ“W
 
 //UTWORZENIE MAPY FIXED SIZE 60X40 W POSTACI DWUWYMIAROWEJ DYNAMICZNEJ TABLICY WSKAZNIKOW CTile
 
@@ -280,7 +280,7 @@ void MapScene::TimerMethod(float dt)
 	animalList.append("Lista zwierzat: \n");
 	int i = 0;
 	for (list<CAnimal*>::iterator it = animals.begin(); it != animals.end(); ++it)
-	{//ITERACJA PO WSZYSTKICH ZWIERZÊTACH
+	{//ITERACJA PO WSZYSTKICH ZWIERZÃŠTACH
 		
 		animalList+= std::to_string((*it)->getID());
 		animalList.append(" HP:");
@@ -307,7 +307,7 @@ void MapScene::UptadeFunction(float dt)
 {
 	srand(time(NULL));
 	CStats::setSimulationTime(CStats::getSimulationTime() + 1);//ZLICZANIE CZASU SYMULACJI
-	//PÊTLA PO LISCIE ZWIERZAT
+	//PÃŠTLA PO LISCIE ZWIERZAT
 		for (list<CAnimal*>::iterator it = animals.begin(); it != animals.end(); ++it)
 		{
 			(*it)->Logic();
@@ -655,7 +655,7 @@ void MapScene::touchEvent5(Ref *sender, Widget::TouchEventType type)
 		break;
 	}
 }
-//KONIEC TOUCH EVENTÓW
+//KONIEC TOUCH EVENTÃ“W
 //FUNKCJE:
 //DODAJ ZWIERZE
 void MapScene::AddAnimal(bool male, int age, int posX, int posY, int a)
